@@ -1,20 +1,37 @@
 /*--- VARIABLES ---*/
 /* COLORING */
-$c_Win_bg: hsl(212, 45%, 89%);
-$c_Card_bg: hsl(0, 0%, 100%);
-$c_Card_text_heading: hsl(218, 44%, 22%);
-$c_Card_text_descr: hsl(220, 15%, 55%);
+$c_Main_01: hsl(47, 88%, 63%);
+$c_Main_02: hsl(0, 0%, 100%);
+$c_Sub_01: hsl(0, 0%, 7%);
+$c_Sub_02: hsl(0, 0%, 50%);
+
+$c_Win_bg: $c_Main_01;
+$c_Card_bg: $c_Main_02;
+$c_Card_shadow: $c_Sub_01;
+$c_Card_text_heading_neutral: $c_Sub_01;
+$c_Card_text_heading_active: $c_Main_01;
+$c_Card_text_descr: $c_Sub_02;
+$c_Card_text_author_neutral: $c_Sub_01;
+$c_Card_text_author_active: $c_Main_01;
 
 /*--- STYLES ---*/
 /* Sizing */
 
+$m_Card_content: 20px;
+
+$p_Categorie: 5px;
+
+$b_Card_radius: 26px;
+$b_Img_radius: 20px;
+$b_Categorie_radius: $p_Categorie;
+
 /*--- MIXINS ---*/
 /* Text */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 @mixin text_decoration {
-  font-family: 'Protest Strike', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   line-height: 1.1;
 
@@ -24,13 +41,11 @@ $c_Card_text_descr: hsl(220, 15%, 55%);
   h4,
   h5,
   h6 {
-    font-weight: 700;
+    font-weight: 800;
     margin: 0;
-    color: $c_Card_text_heading;
   }
   p {
     margin: 0;
-    color: $c_Card_text_descr;
   }
 
   h1 {
